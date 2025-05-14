@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile | Guideian</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="profile.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="profile-header">
+    <div class="header-content">
+      <div class="back-button">
+        <a href="services.html"><i class="fas fa-arrow-left"></i> Back to Services</a>
+      </div>
+      <h1>My Academic Profile</h1>
+      <div class="profile-actions">
+        <button id="editProfileBtn" class="edit-btn"><i class="fas fa-edit"></i> Edit Profile</button>
+        <button id="printProfileBtn" class="print-btn"><i class="fas fa-print"></i> Print</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="profile-container">
+    <section class="profile-sidebar">
+      <div class="profile-card">
+        <div class="profile-picture">
+          <img src="https://ui-avatars.com/api/?name=John+Doe&background=3328bf&color=fff" alt="Profile Picture" id="profileImage">
+          <div class="edit-overlay" id="editImageBtn">
+            <i class="fas fa-camera"></i>
+          </div>
+        </div>
+        <div class="profile-info">
+          <h2 id="profileName">John Doe</h2>
+          <p class="profile-grade" id="profileGrade">Grade 12 Student</p>
+          <p class="profile-school" id="profileSchool">Cape Town High School</p>
+          <div class="profile-stats">
+            <div class="stat">
+              <span class="stat-value" id="overallAverage">78%</span>
+              <span class="stat-label">Average</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value" id="apsScore">38</span>
+              <span class="stat-label">APS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="quick-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#personal-info"><i class="fas fa-user"></i> Personal Info</a></li>
+          <li><a href="#academic-info"><i class="fas fa-graduation-cap"></i> Academic Info</a></li>
+          <li><a href="#subjects"><i class="fas fa-book"></i> Subjects</a></li>
+          <li><a href="#university-targets"><i class="fas fa-university"></i> University Targets</a></li>
+          <li><a href="#performance"><i class="fas fa-chart-line"></i> Performance</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="profile-content">
+      <!-- Personal Information Section -->
+      <div class="profile-section" id="personal-info">
+        <div class="section-header">
+          <h2><i class="fas fa-user"></i> Personal Information</h2>
+          <button class="edit-section-btn" data-section="personal-info"><i class="fas fa-edit"></i></button>
+        </div>
+        <div class="section-content">
+          <div class="info-grid">
+            <div class="info-item">
+              <label>Full Name</label>
+              <p id="fullName">John Doe</p>
+              <input type="text" class="edit-input" style="display: none;" value="John Doe">
+            </div>
+            <div class="info-item">
+              <label>Date of Birth</label>
+              <p id="dob">15/03/2005</p>
+              <input type="date" class="edit-input" style="display: none;" value="2005-03-15">
+            </div>
+            <div class="info-item">
+              <label>ID Number</label>
+              <p id="idNumber">0503151234089</p>
+              <input type="text" class="edit-input" style="display: none;" value="0503151234089">
+            </div>
+            <div class="info-item">
+              <label>Email</label>
+              <p id="email">john.doe@example.com</p>
+              <input type="email" class="edit-input" style="display: none;" value="john.doe@example.com">
+            </div>
+            <div class="info-item">
+              <label>Phone</label>
+              <p id="phone">+27 81 234 5678</p>
+              <input type="tel" class="edit-input" style="display: none;" value="+27 81 234 5678">
+            </div>
+            <div class="info-item">
+              <label>Address</label>
+              <p id="address">123 Main Rd, Cape Town, 8001</p>
+              <input type="text" class="edit-input" style="display: none;" value="123 Main Rd, Cape Town, 8001">
+            </div>
+          </div>
+          <div class="edit-buttons" style="display: none;">
+            <button class="save-btn">Save Changes</button>
+            <button class="cancel-btn">Cancel</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Academic Information Section -->
+      <div class="profile-section" id="academic-info">
+        <div class="section-header">
+          <h2><i class="fas fa-graduation-cap"></i> Academic Information</h2>
+          <button class="edit-section-btn" data-section="academic-info"><i class="fas fa-edit"></i></button>
+        </div>
+        <div class="section-content">
+          <div class="info-grid">
+            <div class="info-item">
+              <label>Current Grade</label>
+              <p id="currentGrade">12</p>
+              <select class="edit-input" style="display: none;">
+                <option value="8">Grade 8</option>
+                <option value="9">Grade 9</option>
+                <option value="10">Grade 10</option>
+                <option value="11">Grade 11</option>
+                <option value="12" selected>Grade 12</option>
+              </select>
+            </div>
+            <div class="info-item">
+              <label>School</label>
+              <p id="schoolName">Cape Town High School</p>
+              <input type="text" class="edit-input" style="display: none;" value="Cape Town High School">
+            </div>
+            <div class="info-item">
+              <label>Academic Year</label>
+              <p id="academicYear">2023</p>
+              <input type="number" class="edit-input" style="display: none;" value="2023">
+            </div>
+            <div class="info-item">
+              <label>Stream</label>
+              <p id="academicStream">Science and Technology</p>
+              <select class="edit-input" style="display: none;">
+                <option value="Science and Technology" selected>Science and Technology</option>
+                <option value="Commerce">Commerce</option>
+                <option value="Arts">Arts</option>
+                <option value="General">General</option>
+              </select>
+            </div>
+          </div>
+          <div class="edit-buttons" style="display: none;">
+            <button class="save-btn">Save Changes</button>
+            <button class="cancel-btn">Cancel</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3: Subjects -->
+<div class="setup-step" data-step="3" style="display: none;">
+  <div class="step-header">
+    <h3>Your Subjects</h3>
+    <p>Add the subjects you're currently taking</p>
+  </div>
+  
+  <div class="subject-selection">
+    <div class="subject-search">
+      <i class="fas fa-search"></i>
+      <input type="text" placeholder="Search for subjects...">
+    </div>
+    
+    <div class="subject-categories">
+      <button class="subject-category-btn active">All</button>
+      <button class="subject-category-btn">Science</button>
+      <button class="subject-category-btn">Mathematics</button>
+      <button class="subject-category-btn">Languages</button>
+      <button class="subject-category-btn">Humanities</button>
+    </div>
+    
+    <div class="subject-level-selector">
+      <button class="subject-level-btn active">All Levels</button>
+      <button class="subject-level-btn">Higher Level</button>
+      <button class="subject-level-btn">Standard Level</button>
+    </div>
+    
+    <div class="subject-options">
+      <!-- Subject options will be populated here -->
+    </div>
+    
+    <div class="selected-subjects">
+      <h4>Selected Subjects (<span id="selectedSubjectsCount">0</span>)</h4>
+      <div class="selected-subjects-list" id="selectedSubjectsList">
+        <!-- Selected subjects will appear here -->
+      </div>
+    </div>
+  </div>
+  
+  <button type="button" class="add-subject-btn" id="addSubjectBtn">
+    <i class="fas fa-plus"></i> Add Subject
+  </button>
+</div>
+
+      <!-- University Targets Section -->
+      <div class="profile-section" id="university-targets">
+        <div class="section-header">
+          <h2><i class="fas fa-university"></i> University Targets</h2>
+          <button class="add-university-btn"><i class="fas fa-plus"></i> Add Target</button>
+        </div>
+        <div class="section-content">
+          <div class="university-cards" id="universityContainer">
+            <!-- University cards will be added here dynamically -->
+          </div>
+          
+          <div class="aps-calculator">
+            <h3>APS Calculator</h3>
+            <p>Admission Point Score (APS) is used by South African universities to assess applicants.</p>
+            
+            <div class="aps-info">
+              <div class="aps-universities">
+                <h4>Minimum APS Requirements</h4>
+                <ul id="apsRequirements">
+                  <!-- APS requirements will be added here dynamically -->
+                </ul>
+              </div>
+              <div class="aps-breakdown">
+                <h4>Your APS Breakdown</h4>
+                <table id="apsBreakdown">
+                  <thead>
+                    <tr>
+                      <th>Subject</th>
+                      <th>%</th>
+                      <th>Points</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- APS breakdown will be added here dynamically -->
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <th>Total APS</th>
+                      <th></th>
+                      <th id="totalAps">0</th>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Performance Section -->
+      <div class="profile-section" id="performance">
+        <div class="section-header">
+          <h2><i class="fas fa-chart-line"></i> Performance Analytics</h2>
+        </div>
+        <div class="section-content">
+          <div class="performance-grid">
+            <div class="performance-card">
+              <h3>Term Averages</h3>
+              <div class="chart-container">
+                <canvas id="termChart"></canvas>
+              </div>
+            </div>
+            <div class="performance-card">
+              <h3>Subject Comparison</h3>
+              <div class="chart-container">
+                <canvas id="subjectChart"></canvas>
+              </div>
+            </div>
+            <div class="performance-card">
+              <h3>University Match</h3>
+              <div class="chart-container">
+                <canvas id="universityChart"></canvas>
+              </div>
+            </div>
+            <div class="performance-card">
+              <h3>Progress Over Time</h3>
+              <div class="chart-container">
+                <canvas id="progressChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Add Subject Modal -->
+  <div class="modal" id="addSubjectModal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Add New Subject</h2>
+      <form id="subjectForm">
+        <div class="form-group">
+          <label for="subjectName">Subject Name</label>
+          <input type="text" id="subjectName" required>
+        </div>
+        <div class="form-group">
+          <label for="subjectLevel">Level</label>
+          <select id="subjectLevel" required>
+            <option value="HL">Higher Level</option>
+            <option value="SL">Standard Level</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="subjectTerm1">Term 1 %</label>
+          <input type="number" id="subjectTerm1" min="0" max="100">
+        </div>
+        <div class="form-group">
+          <label for="subjectTerm2">Term 2 %</label>
+          <input type="number" id="subjectTerm2" min="0" max="100">
+        </div>
+        <div class="form-group">
+          <label for="subjectTerm3">Term 3 %</label>
+          <input type="number" id="subjectTerm3" min="0" max="100">
+        </div>
+        <div class="form-group">
+          <label for="subjectTerm4">Term 4 %</label>
+          <input type="number" id="subjectTerm4" min="0" max="100">
+        </div>
+        <button type="submit" class="submit-btn">Add Subject</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Add University Modal -->
+  <div class="modal" id="addUniversityModal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Add University Target</h2>
+      <form id="universityForm">
+        <div class="form-group">
+          <label for="universityName">University</label>
+          <select id="universityName" required>
+            <option value="">Select University</option>
+            <option value="University of Cape Town">University of Cape Town (UCT)</option>
+            <option value="University of the Witwatersrand">University of the Witwatersrand (Wits)</option>
+            <option value="Stellenbosch University">Stellenbosch University (Maties)</option>
+            <option value="University of Pretoria">University of Pretoria (UP/Tuks)</option>
+            <option value="University of Johannesburg">University of Johannesburg (UJ)</option>
+            <option value="Rhodes University">Rhodes University</option>
+            <option value="University of KwaZulu-Natal">University of KwaZulu-Natal (UKZN)</option>
+            <option value="North-West University">North-West University (NWU)</option>
+            <option value="University of the Free State">University of the Free State (UFS)</option>
+            <option value="University of Limpopo">University of Limpopo</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="faculty">Faculty</label>
+          <select id="faculty" required>
+            <option value="">Select Faculty</option>
+            <option value="Science">Science</option>
+            <option value="Engineering">Engineering</option>
+            <option value="Commerce">Commerce</option>
+            <option value="Arts">Arts</option>
+            <option value="Medicine">Medicine</option>
+            <option value="Law">Law</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="degreeProgram">Degree Program</label>
+          <input type="text" id="degreeProgram" required>
+        </div>
+        <div class="form-group">
+          <label for="requiredAps">Required APS</label>
+          <input type="number" id="requiredAps" min="20" max="42" required>
+        </div>
+        <div class="form-group">
+          <label for="additionalRequirements">Additional Requirements</label>
+          <textarea id="additionalRequirements"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Add Target</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Image Upload Modal -->
+  <div class="modal" id="imageUploadModal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Update Profile Picture</h2>
+      <div class="image-upload-container">
+        <div class="image-preview" id="imagePreview">
+          <img src="" alt="Preview" id="previewImage">
+        </div>
+        <input type="file" id="imageUpload" accept="image/*">
+        <label for="imageUpload" class="upload-btn">Choose Image</label>
+        <button id="saveImageBtn" class="submit-btn">Save Picture</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="profile.js"></script>
+</body>
+</html>

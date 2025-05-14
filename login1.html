@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Guideian</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="auth.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-header">
+      <div class="logo-container">
+        <img src="images/LOGO.png" alt="Guideian Logo" class="logo-image">
+        <div class="logo-text">
+          <h1 class="logo-title">Guideian</h1>
+          <p class="logo-subtitle">Future Ready</p>
+        </div>
+      </div>
+      <h2>Welcome back!</h2>
+      <p>Sign in to access your personalized academic profile</p>
+    </div>
+
+    <div class="auth-form-container">
+      <form id="loginForm" class="auth-form">
+        <div class="form-group">
+          <label for="loginEmail">Email</label>
+          <div class="input-with-icon">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="loginEmail" placeholder="Enter your email" required>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="loginPassword">Password</label>
+          <div class="input-with-icon">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="loginPassword" placeholder="Enter your password" required>
+            <i class="fas fa-eye toggle-password" data-target="loginPassword"></i>
+          </div>
+          <div class="form-options">
+            <div class="remember-me">
+              <input type="checkbox" id="rememberMe">
+              <label for="rememberMe">Remember me</label>
+            </div>
+            <a href="#" id="forgotPassword">Forgot password?</a>
+          </div>
+        </div>
+        
+        <button type="submit" class="auth-button">Sign In</button>
+        
+        <div class="auth-divider">
+          <span>or continue with</span>
+        </div>
+        
+        <div class="social-auth">
+          <button type="button" class="social-button google">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google">
+            Google
+          </button>
+          <button type="button" class="social-button microsoft">
+            <i class="fab fa-microsoft"></i>
+            Microsoft
+          </button>
+        </div>
+        
+        <div class="auth-footer">
+          Don't have an account? <a href="signup.html">Sign up</a>
+        </div>
+      </form>
+      
+      <div class="auth-features">
+        <div class="feature-card">
+          <i class="fas fa-chart-line"></i>
+          <h3>Track Your Progress</h3>
+          <p>Monitor your academic performance over time with detailed analytics</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-university"></i>
+          <h3>University Matching</h3>
+          <p>Find the perfect universities based on your academic profile</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-book"></i>
+          <h3>Subject Insights</h3>
+          <p>Get personalized recommendations for subject selection</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Forgot Password Modal -->
+  <div class="modal" id="forgotPasswordModal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Reset Your Password</h2>
+      <form id="forgotPasswordForm">
+        <div class="form-group">
+          <label for="resetEmail">Email Address</label>
+          <input type="email" id="resetEmail" placeholder="Enter your email" required>
+        </div>
+        <button type="submit" class="auth-button">Send Reset Link</button>
+      </form>
+      <div class="reset-success" style="display: none;">
+        <i class="fas fa-check-circle"></i>
+        <p>Password reset link has been sent to your email!</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="auth.js"></script>
+</body>
+</html>

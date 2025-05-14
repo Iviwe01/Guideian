@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Guideian</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="auth.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo-container">
+      <svg class="logo-svg" width="217" height="55" viewBox="0 0 217 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <text fill="black" xml:space="preserve" style="white-space: pre" font-family="Tenor Sans" font-size="26" letter-spacing="0em">
+          <tspan x="63" y="25.71">Guideian</tspan>
+        </text>
+        <text fill="black" xml:space="preserve" style="white-space: pre" font-family="Tenor Sans" font-size="13" letter-spacing="0em">
+          <tspan x="64" y="45.855">Future Ready</tspan>
+        </text>
+        <path d="M55.0188 1C55.0188 1 40.0187 1 25.0188 1C10.0189 1 0.518789 17 1.01882 28C1.51886 39 9.01882 52.7638 25.0188 53C41.0188 53.2362 54.0188 53 54.0188 53V28" stroke="black" stroke-width="1.5"></path>
+        <path d="M55.0188 5C55.0188 5 38.0188 5 26.5188 5C15.0188 5 5.0188 14.3256 5.0188 28C5.0188 41.6744 16.0323 49 27.0188 49C38.0053 49 50.0188 49 50.0188 49V40V28" stroke="black" stroke-width="1.5"></path>
+        <path d="M55.0188 9C55.0188 9 33.473 9 25.9207 9C18.3683 9 9.0188 17.1554 9.0188 28C9.0188 38.8446 17.2723 45.5 26.0188 45.5C34.7653 45.5 46.0188 45.5 46.0188 45.5V37.5V28" stroke="black" stroke-width="1.5"></path>
+        <path d="M55.0188 13C55.0188 13 32.2727 13 26.2633 13C20.2539 13 13.0188 18.9385 13.0188 27.5C13.0188 36.0615 20.0188 41 26.5188 41.5C33.0188 42 42.0188 41.5 42.0188 41.5V28" stroke="black" stroke-width="1.5"></path>
+        <path d="M55.0189 17C55.0189 17 35.6287 17 28.0738 17C20.5189 17 16.5189 21.5 17.0189 28C17.5189 34.5 23.1612 37.5 28.0738 37.5C32.9865 37.5 38.0189 37.5 38.0189 37.5V28" stroke="black" stroke-width="1.5"></path>
+        <path d="M55.0188 21C55.0188 21 29.7875 21 27.1858 21C24.5841 21 21.0188 23.4418 21.0188 27.1518C21.0188 30.8618 23.5188 34 27.1858 34C30.8529 34 34.0188 34 34.0188 34V28" stroke="black" stroke-width="1.5"></path>
+      </svg>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="about.html" class="nav-link">About Us</a>
+      <a href="contact.html" class="nav-link">Contact us</a>
+    </nav>
+    <div class="auth-buttons">
+      <a href="login.html" class="login-btn">Log In</a>
+      <a href="signup.html" class="signup-btn">Sign Up</a>
+    </div>
+  </header>
+
+  <div class="auth-container">
+    <div class="auth-header">
+      <h2>Welcome back!</h2>
+      <p>Sign in to access your personalized academic profile</p>
+    </div>
+
+    <div class="auth-form-container">
+      <form id="loginForm" class="auth-form">
+        <div class="form-group">
+          <label for="loginEmail">Email</label>
+          <div class="input-with-icon">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="loginEmail" placeholder="Enter your email" required>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="loginPassword">Password</label>
+          <div class="input-with-icon">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="loginPassword" placeholder="Enter your password" required>
+            <i class="fas fa-eye toggle-password" data-target="loginPassword"></i>
+          </div>
+          <div class="form-options">
+            <div class="remember-me">
+              <input type="checkbox" id="rememberMe">
+              <label for="rememberMe">Remember me</label>
+            </div>
+            <a href="#" id="forgotPassword">Forgot password?</a>
+          </div>
+        </div>
+        
+        <button type="submit" class="auth-button">Sign In</button>
+        
+        <div class="auth-divider">
+          <span>or continue with</span>
+        </div>
+        
+        <div class="social-auth">
+          <button type="button" class="social-button google">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google">
+            Google
+          </button>
+          <button type="button" class="social-button microsoft">
+            <i class="fab fa-microsoft"></i>
+            Microsoft
+          </button>
+        </div>
+        
+        <div class="auth-footer">
+          Don't have an account? <a href="signup.html">Sign up</a>
+        </div>
+      </form>
+      
+      <div class="auth-features">
+        <div class="feature-card">
+          <i class="fas fa-chart-line"></i>
+          <h3>Track Your Progress</h3>
+          <p>Monitor your academic performance over time with detailed analytics</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-university"></i>
+          <h3>University Matching</h3>
+          <p>Find the perfect universities based on your academic profile</p>
+        </div>
+        <div class="feature-card">
+          <i class="fas fa-book"></i>
+          <h3>Subject Insights</h3>
+          <p>Get personalized recommendations for subject selection</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Forgot Password Modal -->
+  <div class="modal" id="forgotPasswordModal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2>Reset Your Password</h2>
+      <form id="forgotPasswordForm">
+        <div class="form-group">
+          <label for="resetEmail">Email Address</label>
+          <input type="email" id="resetEmail" placeholder="Enter your email" required>
+        </div>
+        <button type="submit" class="auth-button">Send Reset Link</button>
+      </form>
+      <div class="reset-success" style="display: none;">
+        <i class="fas fa-check-circle"></i>
+        <p>Password reset link has been sent to your email!</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="main-footer">
+    <div class="footer-content">
+      <div class="footer-info">
+        <svg class="footer-logo" width="217" height="55" viewBox="0 0 217 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <text fill="black" xml:space="preserve" style="white-space: pre" font-family="Tenor Sans" font-size="26" letter-spacing="0em">
+            <tspan x="63" y="25.71">Guideian</tspan>
+          </text>
+          <text fill="black" xml:space="preserve" style="white-space: pre" font-family="Tenor Sans" font-size="13" letter-spacing="0em">
+            <tspan x="64" y="45.855">Future Ready</tspan>
+          </text>
+          <path d="M55.0188 1C55.0188 1 40.0187 1 25.0188 1C10.0189 1 0.518789 17 1.01882 28C1.51886 39 9.01882 52.7638 25.0188 53C41.0188 53.2362 54.0188 53 54.0188 53V28" stroke="black" stroke-width="1.5"></path>
+          <path d="M55.0188 5C55.0188 5 38.0188 5 26.5188 5C15.0188 5 5.0188 14.3256 5.0188 28C5.0188 41.6744 16.0323 49 27.0188 49C38.0053 49 50.0188 49 50.0188 49V40V28" stroke="black" stroke-width="1.5"></path>
+          <path d="M55.0188 9C55.0188 9 33.473 9 25.9207 9C18.3683 9 9.0188 17.1554 9.0188 28C9.0188 38.8446 17.2723 45.5 26.0188 45.5C34.7653 45.5 46.0188 45.5 46.0188 45.5V37.5V28" stroke="black" stroke-width="1.5"></path>
+          <path d="M55.0188 13C55.0188 13 32.2727 13 26.2633 13C20.2539 13 13.0188 18.9385 13.0188 27.5C13.0188 36.0615 20.0188 41 26.5188 41.5C33.0188 42 42.0188 41.5 42.0188 41.5V28" stroke="black" stroke-width="1.5"></path>
+          <path d="M55.0189 17C55.0189 17 35.6287 17 28.0738 17C20.5189 17 16.5189 21.5 17.0189 28C17.5189 34.5 23.1612 37.5 28.0738 37.5C32.9865 37.5 38.0189 37.5 38.0189 37.5V28" stroke="black" stroke-width="1.5"></path>
+          <path d="M55.0188 21C55.0188 21 29.7875 21 27.1858 21C24.5841 21 21.0188 23.4418 21.0188 27.1518C21.0188 30.8618 23.5188 34 27.1858 34C30.8529 34 34.0188 34 34.0188 34V28" stroke="black" stroke-width="1.5"></path>
+        </svg>
+        <p class="footer-description">Your roadmap to a bright future. We help South African students navigate their educational journey from high school to university.</p>
+        <div class="social-icons">
+          <a href="#" class="social-link">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="social-icon">
+              <path d="M15 1.66663H12.5C11.395 1.66663 10.3352 2.10561 9.55376 2.88701C8.77236 3.66842 8.33337 4.72822 8.33337 5.83329V8.33329H5.83337V11.6666H8.33337V18.3333H11.6667V11.6666H14.1667L15 8.33329H11.6667V5.83329C11.6667 5.61228 11.7545 5.40032 11.9108 5.24404C12.0671 5.08776 12.279 4.99996 12.5 4.99996H15V1.66663Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </a>
+          <a href="#" class="social-link">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="social-icon">
+              <path d="M14.1666 1.66663H5.83329C3.53211 1.66663 1.66663 3.53211 1.66663 5.83329V14.1666C1.66663 16.4678 3.53211 18.3333 5.83329 18.3333H14.1666C16.4678 18.3333 18.3333 16.4678 18.3333 14.1666V5.83329C18.3333 3.53211 16.4678 1.66663 14.1666 1.66663Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M13.3334 9.47501C13.4362 10.1685 13.3178 10.8769 12.9948 11.4992C12.6719 12.1215 12.161 12.6262 11.5347 12.9414C10.9085 13.2566 10.1987 13.3663 9.50653 13.255C8.81431 13.1436 8.17484 12.8167 7.67907 12.321C7.1833 11.8252 6.85648 11.1857 6.7451 10.4935C6.63371 9.8013 6.74343 9.09159 7.05865 8.46532C7.37386 7.83905 7.87853 7.32812 8.50086 7.00521C9.12319 6.68229 9.8315 6.56383 10.525 6.66667C11.2325 6.77158 11.8874 7.10123 12.3931 7.60693C12.8988 8.11263 13.2285 8.76757 13.3334 9.47501Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M14.5834 5.41663H14.5917" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </a>
+          <a href="#" class="social-link">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" class="social-icon">
+              <path d="M13.3334 6.66663C14.6595 6.66663 15.9312 7.19341 16.8689 8.13109C17.8066 9.06877 18.3334 10.3405 18.3334 11.6666V17.5H15V11.6666C15 11.2246 14.8244 10.8007 14.5119 10.4881C14.1993 10.1756 13.7754 9.99996 13.3334 9.99996C12.8913 9.99996 12.4674 10.1756 12.1549 10.4881C11.8423 10.8007 11.6667 11.2246 11.6667 11.6666V17.5H8.33337V11.6666C8.33337 10.3405 8.86016 9.06877 9.79784 8.13109C10.7355 7.19341 12.0073 6.66663 13.3334 6.66663Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M4.99996 7.5H1.66663V17.5H4.99996V7.5Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M3.33329 4.99996C4.25377 4.99996 4.99996 4.25377 4.99996 3.33329C4.99996 2.41282 4.25377 1.66663 3.33329 1.66663C2.41282 1.66663 1.66663 2.41282 1.66663 3.33329C1.66663 4.25377 2.41282 4.99996 3.33329 4.99996Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-links-container">
+        <div class="quick-links">
+          <h3 class="footer-heading">Quick Links</h3>
+          <a href="index.html" class="footer-link">Home</a>
+          <a href="services.html" class="footer-link">Services</a>
+          <a href="about.html" class="footer-link">About Us</a>
+          <a href="contact.html" class="footer-link">Contact Us</a>
+          <a href="signup.html" class="footer-link">Sign Up</a>
+        </div>
+
+        <div class="contact-info">
+          <h3 class="footer-heading">Contact Us</h3>
+          <address>
+            <p class="contact-detail">Cape Town, South Africa</p>
+            <p class="contact-detail">guideian.help@gmail.com</p>
+            <p class="contact-detail">+27 81 487 5688</p>
+          </address>
+        </div>
+
+        <div class="cta-container">
+          <h2 class="cta-heading">Let's start your journey now!</h2>
+          <a href="signup.html" class="cta-button">Sign Up</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">Copyright @ 2025 Guideian, All rights reserved.</div>
+  </footer>
+
+  <script src="auth.js"></script>
+</body>
+</html>
